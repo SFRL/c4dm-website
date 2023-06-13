@@ -13,7 +13,7 @@ const Project = ({pageContext}) => {
       {
         active: allMarkdownRemark(
           filter: { fields: { category: { eq: "projects" } }, frontmatter: { status: { eq: "active" } } }
-          sort: { frontmatter: { date: DESC } }
+          sort: { frontmatter: { end: DESC } }
         ) {
           nodes {
             frontmatter {

@@ -17,11 +17,11 @@ const Research = ({pageContext}) => {
                         <div className="column is-one-quarter-desktop is-one-third-tablet is-full-mobile is-flex">
                             <div className="card is-flex is-flex-direction-column is-flex-grow-1">
                                 <Link to="./groups">
-                                <div className="card-image">
-                                    <figure className="image">
+                                <div className="card-image is-256x256">
+                                    <figure className="image ">
                                         <StaticImage
                                             alt="default event picture as no event picture was specified"
-                                            src="../../content/research/images/projects.png"
+                                            src="../../images/groups.png"
                                         />
                                     </figure>
                                 </div>
@@ -43,13 +43,13 @@ const Research = ({pageContext}) => {
                         <div className="column is-one-quarter-desktop is-one-third-tablet is-full-mobile is-flex">
                             <div className="card is-flex is-flex-direction-column is-flex-grow-1">
                                 <Link to="./projects">
-                                <div className="card-image">
+                                <div className="card-image is-256x256">
                                    
-                                    <figure className="image">
+                                    <figure className="image ">
                                         
                                         <StaticImage
                                             alt="default event picture as no event picture was specified"
-                                            src="../../content/research/images/projects.png"
+                                            src="../../images/projects.png"
                                         />
                                     </figure>
                                 </div>
@@ -70,12 +70,12 @@ const Research = ({pageContext}) => {
                         <div className="column is-one-quarter-desktop is-one-third-tablet is-full-mobile is-flex">
                             <div className="card is-flex is-flex-direction-column is-flex-grow-1">
                                 <Link to="./publications">
-                                <div className="card-image">
-                                    <figure className="image">
+                                <div className="card-image is-256x256">
+                                    <figure className="image ">
                                         
                                         <StaticImage
                                             alt="default event picture as no event picture was specified"
-                                            src="../../content/research/images/projects.png"
+                                            src="../../images/publications.png"
                                         />
                                     </figure>
                                 </div>
@@ -101,7 +101,7 @@ const Research = ({pageContext}) => {
                                         
                                         <StaticImage
                                             alt="default event picture as no event picture was specified"
-                                            src="../../content/research/images/projects.png"
+                                            src="../../images/code.png"
                                         />
                                     </figure>
                                 </div>
@@ -127,8 +127,7 @@ const Research = ({pageContext}) => {
                                         
                                         <StaticImage
                                             alt="default event picture as no event picture was specified"
-                                            src="../../content/research/images/projects.png"
-                                        />
+                                            src="../../images/patents.png"                                        />
                                     </figure>
                                 </div>
 
