@@ -1,6 +1,5 @@
 ---
 title: "Software"
-video: https://www.youtube.com/embed/Rcbs4NvMFHM
 image: "c4dm.png"
 category: "siteCopy"
 ---

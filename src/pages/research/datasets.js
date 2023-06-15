@@ -1,5 +1,5 @@
 import * as React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import { Link, graphql, useStaticQuery } from "gatsby";
 import "../../style/bulmacustom.scss"
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Layout from "../../components/layout.js";
