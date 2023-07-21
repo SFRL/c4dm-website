@@ -8,5 +8,6 @@ grant: "AIM CDT PhD studentship"
 partner: "Universal Music Group"
 amount: "£54,000 "
 status: "active"
+tags: ["industry"]
 image: "./universalaim.jpeg"
 ---

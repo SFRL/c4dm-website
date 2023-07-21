@@ -8,7 +8,7 @@ grant: "AHRC Grant AH/W010429/1"
 amount: "£29,812"
 status: "active"
 tags: ["academic"]
-image: "./rudiments.png"
+image: "./defaultimage.png"
 ---
 
 

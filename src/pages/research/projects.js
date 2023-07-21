@@ -100,6 +100,13 @@ const Project = ({pageContext}) => {
             totalCount
           }
         }
+
+        completed: markdownRemark(
+          fields: { category: { eq: "projects/completed" } }
+          fileAbsolutePath: { regex: "/completedProjects.md/" }
+        ) {
+        html
+        }
       }
     `);
 
@@ -126,7 +133,7 @@ const Project = ({pageContext}) => {
           {filteredProjects.active.length ? (
             <>
               <div className="lowerPadding"></div>
-              <h2 className="subtitle">All Active Projects</h2>
+              <h2 className="subtitle">Current Projects</h2>
               {filteredProjects.active}
             </>
           ) : undefined}
@@ -134,9 +141,17 @@ const Project = ({pageContext}) => {
           {filteredProjects.completed.length ? (
             <>
               <div className="lowerPadding"></div>
-              <h2 className="subtitle">All Completed Projects</h2>
+              <h2 className="subtitle">Recent Completed Projects</h2>
               {filteredProjects.completed}
             </> ) : undefined}
+
+            <div className="lowerPadding"></div>
+            <div className="lowerPadding"></div>
+            <h2 className="subtitle">More past projects</h2>
+            <div
+            className="content"
+            dangerouslySetInnerHTML={{ __html: data.completed.html }}
+          ></div>
             
         </section>
       </Layout>

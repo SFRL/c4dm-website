@@ -8,6 +8,7 @@ grant: "AIM CDT PhD studentship"
 partner: "MUSIC Tribe Brands UK Limited"
 amount: "£27,000 "
 status: "active"
-image: "./rudiments.png"
+tags: ["industry"]
+image: "./defaultimage.png"
 ---
 
