@@ -26,6 +26,7 @@ const Partners = ({pageContext}) => {
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED
+                    width: 800
                     aspectRatio: 1
                     backgroundColor: "transparent"
                     transformOptions: { fit: CONTAIN }

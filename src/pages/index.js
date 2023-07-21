@@ -118,7 +118,7 @@ const IndexPage = ({pageContext}) => {
                 </Link>
               </div>
               <div className="column is-two-thirds-desktop is-full-tablet">
-                {/* <Video videoSrcURL={data.about.frontmatter.video} /> */}
+                <Video videoSrcURL={data.about.frontmatter.video} />
               </div>
             </div>
           </div>

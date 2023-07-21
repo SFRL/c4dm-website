@@ -21,7 +21,7 @@ const Research = ({pageContext}) => {
                 slug
                 image {
                     childImageSharp {
-                    gatsbyImageData(layout: CONSTRAINED)
+                    gatsbyImageData(layout: CONSTRAINED, width: 800)
                     }
                 }
                 }
