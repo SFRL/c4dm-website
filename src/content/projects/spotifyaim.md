@@ -7,6 +7,7 @@ end: "2024"
 grant: "AIM CDT PhD studentship"
 partner: "Spotify Ltd"
 amount: "£108,000"
+tags: ["industry"]
 status: "active"
-image: "./rudiments.png"
+image: "./defaultimage.png"
 ---
