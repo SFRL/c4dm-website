@@ -6,25 +6,14 @@ import ParallelogramHeader from "../components/parallelogramHeader";
 import TableCard from "../components/tableCard";
 import TagSelector from "../components/tagSelector";
 
-// Keys for the elements of the table
-const keys = ["name", "acadposition", "blurb"];
-
-// Actual Titles for the table
-const headingNames = ["Name", "Academic Position", "Description" ];
-
-var headings = {};
-keys.forEach((key, i) => headings[key] = headingNames[i]);
-
-
-// Functions to return strucutred content for table card
 const firstColumn = (image) => (
   <>
     {image ? (
-      <GatsbyImage alt="picture of event" image={image} />
+      <GatsbyImage alt="picture of person" image={image.childImageSharp.gatsbyImageData} />
     ) : (
       <StaticImage
-        alt="default event picture as no event picture was specified"
-        src="../../static/defaultevent.png"
+        alt="default picture as no picture was specified"
+        src="../content/people/defaultprofile.png"
       />
     )}
   </>
@@ -44,10 +33,9 @@ const People = ({pageContext}) => {
     breadcrumb: { crumbs },
   } = pageContext
     const data = useStaticQuery(graphql`
-      {
-        people: allMarkdownRemark(
+      {people: allMarkdownRemark(
           filter: { fields: { category: { eq: "people" } } }
-          sort: { frontmatter: { role: DESC } }
+          sort: { frontmatter: { role: ASC } }
         ) {
           nodes {
             frontmatter {
@@ -56,6 +44,7 @@ const People = ({pageContext}) => {
                   gatsbyImageData(layout: CONSTRAINED, aspectRatio: 1)
                 }
               }
+              
               name
               role
               url
@@ -67,8 +56,11 @@ const People = ({pageContext}) => {
             id
           }
         }
+      
+  
+  
         allTags: allMarkdownRemark(
-          limit: 2000
+          limit: 20000
           filter: { fields: { category: { eq: "people" } } }
         ) {
           group(field: { frontmatter: { role: SELECT } }) {
@@ -104,21 +96,37 @@ const People = ({pageContext}) => {
               nodes={data.people.nodes}
               callback={getFilteredNodes}
             />
-            <div className="lowerPadding"></div>
-            {filteredNodes.map((peopleentry) => (
+
+            {filteredNodes.map((peopleentry,index) => {
+
+              let heading;
+              if (index === 0 || peopleentry.frontmatter.role !== filteredNodes[index-1].frontmatter.role) {
+                heading = 
+                <div>
+                  <p className="title is-4 pt-5" >{peopleentry.frontmatter.role}</p>
+                </div>;
+              }
+              return (
+              <>
+                {heading}
               <Link to={peopleentry.frontmatter.url}>
                 <div
                   class="card-image row is-three-fifths pt-3"
                   key={peopleentry.id}
                 >
                 <TableCard 
-                    first={firstColumn(peopleentry.frontmatter.image.childImageSharp.gatsbyImageData)} 
+                    first={firstColumn(peopleentry.frontmatter.image)} 
                     second={secondColumn(peopleentry.frontmatter.name, peopleentry.frontmatter.acadposition)} 
                     third={thirdColumn(peopleentry.frontmatter.blurb)} 
                 />
                 </div>
                 </Link>
-              ))}
+                </>
+              )
+              }
+              )
+              }
+
         </section>
       </Layout>
     );
