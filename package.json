@@ -17,6 +17,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.3.0",
     "@mdx-js/react": "^2.3.0",
+    "babel-plugin-styled-components": "^2.1.4",
     "bulma": "^0.9.4",
     "gatsby": "^5.7.0",
     "gatsby-plugin-breadcrumb": "^12.3.2",
@@ -26,6 +27,7 @@
     "gatsby-plugin-mdx": "^5.7.0",
     "gatsby-plugin-sass": "^6.7.0",
     "gatsby-plugin-sharp": "^5.7.0",
+    "gatsby-plugin-styled-components": "^6.11.0",
     "gatsby-plugin-twitter": "^5.8.0",
     "gatsby-remark-embed-video": "^3.2.1",
     "gatsby-remark-responsive-iframe": "^6.8.0",
@@ -36,6 +38,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
-    "sass": "^1.58.3"
+    "sass": "^1.58.3",
+    "sharp": "^0.32.4",
+    "styled-components": "^6.0.7"
   }
 }
