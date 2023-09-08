@@ -97,35 +97,8 @@ const groups = data.people;
             />
             <div className="lowerPadding"></div>
 
-            {filteredNodes.map((peopleentry,index) => {
-
-              let heading;
-              if (index === 0 || peopleentry.frontmatter.role !== filteredNodes[index-1].frontmatter.role) {
-                heading = 
-                <div>
-                  <p className="title" >{peopleentry.frontmatter.role}</p>
-                </div>;
-              }
-              return (
-              <>
-                {heading}
-              <Link to={peopleentry.frontmatter.url}>
-                <div
-                  class="card-image row is-three-fifths pt-3"
-                  key={peopleentry.id}
-                >
-                <TableCard 
-                    first={firstColumn(peopleentry.frontmatter.image)} 
-                    second={secondColumn(peopleentry.frontmatter.name, peopleentry.frontmatter.acadposition)} 
-                    third={thirdColumn(peopleentry.frontmatter.blurb)} 
-                />
-                </div>
-                </Link>
-                </>
-              )
-              }
-              )
-              }
+            
+            
 
         </section>
       </Layout>
