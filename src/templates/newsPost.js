@@ -13,17 +13,17 @@ const NewsPost = ({ data, pageContext }) => {
     return (
       <Layout name="Blog" crumbs={crumbs}>
         <section className="section" id="header">
+
           <div className="container">
+            <h1 className="title">{frontmatter.title}</h1>
+            <p >
+              by {frontmatter.author} &mdash; {frontmatter.date}
+            </p>
             <GatsbyImage
+              className="news-image"
               alt="Blogpost header image"
               image={frontmatter.image.childImageSharp.gatsbyImageData}
             />
-          </div>
-          <div className="container">
-            <h1 className="title">{frontmatter.title}</h1>
-            <h2 className="subtitle">
-              by {frontmatter.author} &mdash; {frontmatter.date}
-            </h2>
             <div
               className="content"
               dangerouslySetInnerHTML={{ __html: html }}
