@@ -3,7 +3,7 @@
 
 # Introduction
 
-This guide provides you with all the information needed to update and maintain content for the [c4dm website](https://c4dmwebsitemain.gatsbyjs.io/). Most of the tasks can be directly performed directly within the [c4dm Github repository](https://github.com/SFRL/c4dm-website). The only folder that you have to focus on is [src/content](./src/content). In this guide we explain how to update the following content from the website:
+This guide provides you with all the information needed to update and maintain content for the [c4dm website](https://c4dmwebsitemain.gatsbyjs.io/). Most of the tasks can be directly performed directly within the [c4dm Github repository](https://github.com/c4dm/c4dm-website). The only folder that you have to focus on is [src/content](./src/content). In this guide we explain how to update the following content from the website:
 
 - [C4DM website maintaining guide](#c4dm-website-maintaining-guide)
 - [Introduction](#introduction)
@@ -21,7 +21,7 @@ This guide provides you with all the information needed to update and maintain c
 
 ## Updating Patents
 For adding a new patent or editing existing ones, go to [/src/content/research/patents/projects](./src/content/research/patents/projects) in the Github repository. 
-You will find a list of .md (markdown) files, one for each patent entry. You will see that each of the files has a structure similar to the following example:
+You will find a list of .md (markdown) files, one for each patent entry. You will see that each of the files has a structure similar to the following example: 
 
 ```
 ---

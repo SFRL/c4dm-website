@@ -7,14 +7,15 @@ on:
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: GitHub Config
+      - name: Github Config
         run: |
-          git config --global user.email "sebastian.lobbers@googlemail.com"
-          git config --global user.name "SFRL"
+            git config --global user.name "c4dm"
+            git config --global user.email "teodoro.dan@gmail.com"
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install dependencies
